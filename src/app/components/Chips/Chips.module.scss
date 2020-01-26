@@ -1,0 +1,21 @@
+.chip-list {
+	display: flex;
+
+	&--wrapLines {
+		flex-wrap: wrap;
+	}
+}
+
+.chip {
+	height: 32px;
+	line-height: 32px;
+	border-radius: 16px;
+	background: var(--accent-background-color);
+	margin: 4px;
+	padding: 0 12px;
+
+	&--active {
+		background-color: var(--primary-color);
+		color: #fff;
+	}
+}

@@ -1,0 +1,68 @@
+.pull-to-refresh {
+	position: fixed;
+	width: 48px;
+	height: 48px;
+	background-color: var(--accent-background-color);
+	z-index: 100;
+	top: calc(10px + env(safe-area-inset-top));
+	left: calc(50vw - 24px);
+	border-radius: 100%;
+}
+
+.refresh,
+.arrow,
+.check,
+.x {
+	visibility: hidden;
+	position: absolute;
+	top: 12px;
+	left: 12px;
+	font-size: 1.2rem;
+}
+
+.arrow {
+	transition: transform 200ms ease-in-out;
+	transform: rotate(90deg);
+}
+
+.pull-to-refresh--hidden {
+	visibility: hidden;
+}
+
+.pull-to-refresh--refreshing {
+	.refresh {
+		visibility: visible;
+		animation: rotating 800ms ease-in-out;
+	}
+}
+
+.pull-to-refresh--shown {
+	.arrow {
+		visibility: visible;
+	}
+}
+
+.pull-to-refresh--pulled {
+	.arrow {
+		visibility: visible;
+		transform: rotate(-90deg);
+	}
+}
+
+.pull-to-refresh--finished {
+	.check {
+		visibility: visible;
+	}
+}
+
+.pull-to-refresh--failed {
+	.x {
+		visibility: visible;
+	}
+}
+
+@keyframes rotating {
+	to {
+		transform: rotate(360deg);
+	}
+}
