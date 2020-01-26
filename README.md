@@ -6,7 +6,7 @@ Vertretungsplan
 </a>
 </h1>
 
-![Netlify]() ![Code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
+![Netlify](https://img.shields.io/netlify/84e38a98-9f25-42ae-9b94-8cdc809b3e2e) ![Code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and can be hosted on [Netlify](https://www.netlify.com/)
 
