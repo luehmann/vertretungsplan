@@ -1,4 +1,4 @@
-import { bemModule } from '@jahed/bem/lib/bemModule'
+import { bemModule, join } from '@jahed/bem'
 import React, { StatelessComponent } from 'react'
 import styles from './Layout.module.scss'
 
@@ -8,9 +8,7 @@ const Content: StatelessComponent<React.DetailedHTMLProps<
 	React.HTMLAttributes<HTMLDivElement>,
 	HTMLDivElement
 >> = ({ className, ...props }) => (
-	<div className={[bem('content'), className].join(' ')}>
-		{props.children}
-	</div>
+	<div className={join(bem('content'), className)}>{props.children}</div>
 )
 
 const RemainingSpace: StatelessComponent = () => (

@@ -1,4 +1,4 @@
-import { bemModule } from '@jahed/bem'
+import { bemModule, join } from '@jahed/bem'
 import React, { StatelessComponent } from 'react'
 import styles from './Typography.module.scss'
 
@@ -14,7 +14,7 @@ const PrimaryHeadline: StatelessComponent<HeadlineProps> = ({
 	children,
 	...props
 }) => (
-	<h1 className={[bem('primary-headline'), className].join(' ')} {...props}>
+	<h1 className={join(bem('primary-headline'), className)} {...props}>
 		{children}
 	</h1>
 )
@@ -24,7 +24,7 @@ const SecondaryHeadline: StatelessComponent<HeadlineProps> = ({
 	children,
 	...props
 }) => (
-	<h2 className={[bem('secondary-headline'), className].join(' ')} {...props}>
+	<h2 className={join(bem('secondary-headline'), className)} {...props}>
 		{children}
 	</h2>
 )
@@ -39,7 +39,7 @@ const Link: StatelessComponent<LinkProps> = ({
 	children,
 	...props
 }) => (
-	<a className={[bem('link'), className].join(' ')} {...props}>
+	<a className={join(bem('link'), className)} {...props}>
 		{children}
 	</a>
 )

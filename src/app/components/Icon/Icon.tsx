@@ -1,4 +1,4 @@
-import { bemModule } from '@jahed/bem'
+import { bemModule, join } from '@jahed/bem'
 import React, { StatelessComponent } from 'react'
 import arrow from '../../img/arrow-right.svg'
 import check from '../../img/check.svg'
@@ -24,7 +24,7 @@ type Props = React.DetailedHTMLProps<
 
 const Icon: StatelessComponent<Props> = ({ type, className, ...props }) => (
 	<div
-		className={[bem('icon'), className].join(' ')}
+		className={join(bem('icon'), className)}
 		style={{ backgroundImage: `url(${type})` }}
 		{...props}
 	/>

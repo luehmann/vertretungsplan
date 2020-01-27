@@ -1,4 +1,4 @@
-import { bemModule } from '@jahed/bem'
+import { bemModule, join } from '@jahed/bem'
 import React, { FunctionComponent } from 'react'
 import styles from './Button.module.scss'
 
@@ -17,7 +17,7 @@ const Button: FunctionComponent<Props> = ({
 }) => {
 	return (
 		<button
-			className={[bem('button', { disabled }), className].join(' ')}
+			className={join(bem('button', { disabled }), className)}
 			{...props}
 		>
 			{children}
