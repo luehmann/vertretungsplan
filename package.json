@@ -52,7 +52,7 @@
 		"@types/react": "^16.9.17",
 		"@types/react-dom": "^16.9.4",
 		"luxon": "^1.21.3",
-		"node-sass": "^4.13.0",
+		"node-sass": "^7.0.0",
 		"npm-run-all": "^4.1.5",
 		"typescript": "^3.7.4"
 	}
